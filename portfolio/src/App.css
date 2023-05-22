@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  align-self: flex-start;
+}
+
+hr{
+  margin-top: 30px;
+  border: 1px #000 solid;
+  border-radius: 10px;
+}
+
+.animate__backInUp{
+  animation-delay: 0.7s;
+}

@@ -1,0 +1,37 @@
+@import 'globals.css';
+
+.titleContainer{
+    display: flex;
+    text-align: center;
+    min-width: 100%;
+}
+
+
+.nameContainer{
+    margin-left: 18px;
+    align-self: center;
+    width: 100%;
+   
+}
+
+.nameContainer h1{
+    font-size: var(--title-size);
+    min-width: 100%;
+    text-align: initial;
+    color: var(--title-color);
+  
+}
+
+.nameContainer p{
+    float: left;
+    font-size: var(--text-size);
+    color: var(--text-color);
+}
+
+
+.profileImg{
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+
+}
