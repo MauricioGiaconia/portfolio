@@ -3,12 +3,12 @@ import styles from './Section.module.css'
 
 export default function Section(props){
     return <div className={`${styles.sectionContainer}`}>
-        <h2>{props.title}</h2>
+        <h2>{props.title.toUpperCase()}</h2>
 
         <div className={`${styles.sectionContent}`}>
             {props.icons? 
-                props.icons.map((icon) => {
-                    return <div className={`${styles.iconContainer}`}>
+                props.icons.map((icon, index) => {
+                    return <div key={index} className={`${styles.iconContainer}`}>
                             <div>
                                 <img src={icon.svg} alt={icon.key} />
                             </div>

@@ -41,10 +41,11 @@
     place-self: end;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 475px) {
 
     .nameContainer h1{
-        font-size: 1.2em;
+        margin-top: 20px;
+        font-size: var(--main-title-smallSize);
         min-width: 100%;
         text-align: initial;
         color: var(--title-color);
@@ -53,7 +54,7 @@
     
     .nameContainer p{
         float: left;
-        font-size: 1em;
+        font-size: var(--main-text-smallSize);
         color: var(--text-color);
     }
 

@@ -6,11 +6,12 @@
 .sectionContainer h2{
     margin-top: var(--spacing-top);
     color: var(--title-color);
-    font-size: var(--title-size);
+    font-size: var(--section-title-size);
 }
 
 .sectionContainer p{
     margin-left: 10px;
+    font-size: var(--section-text-size);
 }
 
 

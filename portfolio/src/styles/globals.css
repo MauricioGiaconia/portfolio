@@ -1,7 +1,12 @@
 :root{
     --title-color: #FFD700;
-    --main-title-size: 1.7em;
+    --main-title-size: 3em;
     --text-color: #fff;
-    --main-text-size: 1.2em;
+    --main-text-size: 1.4em;
     --spacing-top: 9px;
+    --section-title-size: 1.4em;
+    --section-text-size: 1.15em;
+
+    --main-title-smallSize: 1.8em;
+    --main-text-smallSize: 1em;
 }
