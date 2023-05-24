@@ -18,7 +18,7 @@
 
 .nameContainer{
     align-self: center;
-    width: 100%;
+    max-width: 100%;
     place-self: center;
     padding: 5px;
     margin-top: 20px;
@@ -46,7 +46,19 @@
     place-self: end;
 }
 
-@media (max-width: 475px) {
+.linksContainer{
+    display: flex;
+    place-self: end;
+    margin-left: auto;
+}
+
+@media (max-width: 545px) {
+
+    .nameContainer{
+        position: absolute;
+        left: 40%;
+  
+    }
 
     .nameContainer h1{
        

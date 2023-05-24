@@ -3,18 +3,45 @@ import profileImg from '../../img/profile/profile.png';
 import styles from './styles/styles.module.css';
 import 'animate.css';
 import { useEffect, useState } from 'react';
+import { BrowserRouter} from 'react-router-dom';
+
 
 //Components:
 import Section from './components/Section/Section.jsx';
 import Button from './components/Button/Button.jsx';
+import IconLink from './components/IconLink/IconLink.jsx';
+
 import { importAllSvg } from './scripts/getFiles.js';
+import downloadIcon from '../../img/downloadIcon/download.svg';
+import linkedIn from '../../img/contactIcons/linkedIn.svg';
+import github from '../../img/contactIcons/github.svg';
 
 function App() {
 
   const [skillsIcons, setSkillIcons] = useState([]);
   const [softsIcons, setSoftsIcons] = useState([]);
 
-
+  const contactIcons = [
+    {
+      icon: downloadIcon,
+      name: 'Download',
+      text: 'cv',
+      download: true,
+      link: '../cv/CV - Mauricio Giaconía 2023.pdf'
+    },
+    {
+      icon: linkedIn,
+      name: 'LinkedIn',
+      download: false,
+      link: 'https://www.linkedin.com/in/mauricio-giaconia/'
+    },
+    {
+      icon: github,
+      name: 'Github',
+      download: false,
+      link: 'https://github.com/MauricioGiaconia'
+    }
+  ]
 
   useEffect(() => {
     const loadFiles = async () => {
@@ -29,7 +56,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <BrowserRouter>
 
       <div className={`${styles.titleContainer}`}>
         <img className={`animate__animated animate__backInLeft ${styles.profileImg}`} src={profileImg} alt="profile-picture" />
@@ -37,9 +64,28 @@ function App() {
           <p>Bienvenido a mi portfolio, soy</p><br />
           <h1>Mauricio Giaconía</h1>
           <p><i>Desarrollador full stack</i></p>
+
+          
+          
         </div>
 
+        <div className={`${styles.linksContainer}`}>
 
+          {
+            contactIcons.map((icon, index) => {
+              return  <>
+                <IconLink key={index} 
+                          icon={icon.icon}
+                          text={icon.text ? icon.text : false}
+                          download={icon.download}
+                          name={icon.name}
+                          link={icon.link}></IconLink>
+              </>
+            })
+
+          }
+           
+          </div>
 
       </div>
 
@@ -50,15 +96,10 @@ function App() {
           <Section
 
             title="Sobre mi"
-            text="Soy un desarrollador full stack con más de medio año de experiencia en el desarrollo web especializado en PHP y JavaScript. Me apasiona crear soluciones innovadoras y funcionales que brinden una experiencia excepcional a los usuarios. 
-
-            Mi enfoque se centra en el backend utilizando tecnologías como NodeJS, Express y bases de datos como MongoDB, MySQL, SQLite y PostgreSQL y ORMs como sequelize o mongoose. También tengo experiencia en el frontend con NextJS, React y Redux, lo que me permite construir interfaces interactivas y dinámicas.
-            
-            A lo largo de mi carrera, he tenido la oportunidad de trabajar en proyectos que implicaban la creación de nuevas funcionalidades y la resolución de bugs. Estas experiencias me han permitido desarrollar habilidades sólidas en la resolución de problemas, la gestión eficiente del tiempo y el trabajo en equipo.
-            
-            Soy un apasionado de aprender y estar al tanto de las últimas tendencias y tecnologías en el desarrollo web. Siempre estoy dispuesto a asumir nuevos desafíos y buscar soluciones creativas para alcanzar los objetivos establecidos.
-            
-            Si estás buscando a un desarrollador comprometido, con sólidos conocimientos en PHP, JavaScript y un amplio conjunto de tecnologías, estoy listo para contribuir y agregar valor a tu equipo. ¡No dudes en contactarme para discutir cómo puedo ayudarte a llevar tu proyecto al siguiente nivel!
+            text="Soy un desarrollador full stack con más de medio año de experiencia en el desarrollo web especializado en PHP y JavaScript. Mi pasión es crear soluciones innovadoras y funcionales para brindar una experiencia excepcional a los usuarios. 
+            Me enfoco en el backend utilizando tecnologías como NodeJS, Express, bases de datos como MongoDB, MySQL, SQLite y PostgreSQL y ORMs como sequelize o mongoose. Además, tengo experiencia en el frontend con NextJS, React y Redux, construyendo interfaces interactivas y dinámicas. 
+            A lo largo de mi carrera, he trabajado en proyectos que implicaban la creación de nuevas funcionalidades y resolución de bugs, desarrollando habilidades en resolución de problemas, gestión del tiempo y trabajo en equipo. Estoy siempre dispuesto a asumir nuevos desafíos y buscar soluciones creativas para alcanzar objetivos. 
+            Si buscas un desarrollador comprometido, con sólidos conocimientos en PHP, JavaScript y diversas tecnologías, estoy listo para contribuir y agregar valor a tu equipo. ¡Hablemos y trabajemos juntos para llevar tu visión al siguiente nivel!
                   "></Section>
         </div>
 
@@ -77,7 +118,7 @@ function App() {
         </div>
 
       </div>
-    </>
+    </BrowserRouter>
   )
 }
 

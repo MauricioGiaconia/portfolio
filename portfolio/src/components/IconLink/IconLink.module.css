@@ -1,0 +1,15 @@
+.iconContainer{
+    width: 30px;
+    height:  60px;
+    margin-right: 15px;
+}
+
+.iconContainer img{
+    width: 30px;
+    height:  30px;
+}
+
+.iconContainer a{
+    text-decoration: none;
+    color: #fff;
+}
