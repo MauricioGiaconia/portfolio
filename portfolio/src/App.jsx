@@ -27,7 +27,7 @@ function App() {
       name: 'Download',
       text: 'cv',
       download: true,
-      link: '../cv/CV - Mauricio Giaconía 2023.pdf'
+      link: '/cv/CV - Mauricio Giaconía 2023.pdf'
     },
     {
       icon: linkedIn,
