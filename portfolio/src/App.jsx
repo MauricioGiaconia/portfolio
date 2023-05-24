@@ -69,7 +69,7 @@ function App() {
           
         </div>
 
-        <div className={`${styles.linksContainer}`}>
+        <div className={`animate__animated animate__backInRight ${styles.linksContainer}`}>
 
           {
             contactIcons.map((icon, index) => {
