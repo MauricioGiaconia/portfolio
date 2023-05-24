@@ -2,6 +2,13 @@ import styles from './Section.module.css'
 
 
 export default function Section(props){
+
+
+    let paragraphs = [];
+
+    if (props.text){
+        paragraphs = props.text.split('\n');
+    }
     return <div className={`${styles.sectionContainer}`}>
         <h2>{props.title.toUpperCase()}</h2>
 
@@ -15,7 +22,10 @@ export default function Section(props){
                             <h5>{icon.key.toUpperCase()}</h5>
                         </div>
                 })
-                :<p>{props.text}</p>}
+                :
+                paragraphs.map((paragraph, index) => {
+                    return <><p key={index}>{paragraph}</p><br /></>;
+                })}
         </div>
         
     </div>

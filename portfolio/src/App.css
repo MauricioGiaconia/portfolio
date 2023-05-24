@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  min-width: 100%;
   margin: 0 auto;
   text-align: center;
   align-self: flex-start;
@@ -12,5 +12,9 @@ hr{
 }
 
 .animate__backInUp{
-  animation-delay: 0.7s;
+  animation-delay: 1s;
+}
+
+.animate__backInRight{
+  animation-delay: 0.65s
 }
