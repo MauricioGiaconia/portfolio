@@ -24,7 +24,7 @@ export default function Section(props){
                 })
                 :
                 paragraphs.map((paragraph, index) => {
-                    return <><p key={index}>{paragraph}</p><br /></>;
+                    return <div key={index}><p>{paragraph}</p><br /></div>;
                 })}
         </div>
         

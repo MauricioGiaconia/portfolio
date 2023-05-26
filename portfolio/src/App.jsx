@@ -3,23 +3,26 @@ import profileImg from '../../img/profile/profile.png';
 import styles from './styles/styles.module.css';
 import 'animate.css';
 import { useEffect, useState } from 'react';
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 
 //Components:
 import Section from './components/Section/Section.jsx';
-import Button from './components/Button/Button.jsx';
+import FaButton from './components/FaButton/FaButton.jsx';
 import IconLink from './components/IconLink/IconLink.jsx';
+import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import { importAllSvg } from './scripts/getFiles.js';
 import downloadIcon from '../../img/downloadIcon/download.svg';
 import linkedIn from '../../img/contactIcons/linkedIn.svg';
 import github from '../../img/contactIcons/github.svg';
 
+
 function App() {
 
   const [skillsIcons, setSkillIcons] = useState([]);
   const [softsIcons, setSoftsIcons] = useState([]);
+  const [selected, setSelected] = useState(0);
 
   const contactIcons = [
     {
@@ -44,6 +47,7 @@ function App() {
   ]
 
   useEffect(() => {
+
     const loadFiles = async () => {
       const svgSkillsFiles = await importAllSvg();
       const svgSoftFiles = await importAllSvg(true);
@@ -55,41 +59,59 @@ function App() {
     loadFiles();
   }, []);
 
+  const onClickButtonHandler = (index) => {
+    setSelected(index);
+  }
+
   return (
     <BrowserRouter>
 
-      <div className={`${styles.titleContainer}`}>
+      <header className={`${styles.titleContainer}`}>
         <img className={`animate__animated animate__backInLeft ${styles.profileImg}`} src={profileImg} alt="profile-picture" />
         <div className={`animate__animated animate__backInRight ${styles.nameContainer}`}>
           <p>Bienvenido a mi portfolio, soy</p><br />
           <h1>Mauricio Giaconía</h1>
           <p><i>Desarrollador full stack</i></p>
 
-          
-          
+
+
         </div>
 
         <div className={`animate__animated animate__backInRight ${styles.linksContainer}`}>
 
           {
             contactIcons.map((icon, index) => {
-              return  <>
-                <IconLink key={index} 
-                          icon={icon.icon}
-                          text={icon.text ? icon.text : false}
-                          download={icon.download}
-                          name={icon.name}
-                          link={icon.link}></IconLink>
-              </>
+              return <IconLink key={index}
+                icon={icon.icon}
+                text={icon.text ? icon.text : false}
+                download={icon.download}
+                name={icon.name}
+                link={icon.link}></IconLink>
+
             })
 
           }
-           
-          </div>
 
-      </div>
+        </div>
+
+      </header>
 
       <div className={`${styles.main}`}>
+
+        <div className={`animate__animated animate__backInUp ${styles.personalInfo}`}>
+          <FaButton faIcon={faEnvelope}
+            onClick={() => onClickButtonHandler(0)}
+            isSelected={selected === 0}
+            data='maurigiaconia@hotmail.com' />
+          <FaButton faIcon={faLocationDot}
+            onClick={() => onClickButtonHandler(1)}
+            isSelected={selected === 1}
+            data='Olavarría, Buenos Aires, Argentina' />
+          <FaButton faIcon={faPhone}
+            onClick={() => onClickButtonHandler(2)}
+            isSelected={selected === 2}
+            data='(+54)2284-588151' />
+        </div>
 
         <div className='animate__animated animate__backInUp'>
           <hr />
