@@ -1,0 +1,17 @@
+.navContainer{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.navContainer ul{
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    place-content: center;
+}
+
+.navContainer ul li{
+    margin-right: 15px;
+}

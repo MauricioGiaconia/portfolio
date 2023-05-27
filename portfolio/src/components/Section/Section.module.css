@@ -33,4 +33,9 @@
 .iconContainer img{
     width: 40px;
     height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.iconContainer img:hover{
+    transform: scale(1.3);
 }

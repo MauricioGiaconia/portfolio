@@ -1,5 +1,5 @@
 import './App.css'
-import profileImg from '../../img/profile/profile.png';
+import profileImg from './assets/img/profile/profile.png';
 import styles from './styles/styles.module.css';
 import 'animate.css';
 import { useEffect, useState } from 'react';
@@ -10,12 +10,13 @@ import { BrowserRouter } from 'react-router-dom';
 import Section from './components/Section/Section.jsx';
 import FaButton from './components/FaButton/FaButton.jsx';
 import IconLink from './components/IconLink/IconLink.jsx';
+import NavBar from './components/NavBar/NavBar';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import { importAllSvg } from './scripts/getFiles.js';
-import downloadIcon from '../../img/downloadIcon/download.svg';
-import linkedIn from '../../img/contactIcons/linkedIn.svg';
-import github from '../../img/contactIcons/github.svg';
+import downloadIcon from './assets/img/downloadIcon/download.svg';
+import linkedIn from './assets/img/contactIcons/linkedIn.svg';
+import github from './assets/img/contactIcons/github.svg';
 
 
 function App() {
@@ -67,6 +68,37 @@ function App() {
     <BrowserRouter>
 
       <header className={`${styles.titleContainer}`}>
+
+        <NavBar
+          navigation={[
+            {
+              text:"Sobre mi",
+              href:"#about"
+            },
+            {
+              text:"Habilidades técnicas",
+              href:"techSkills"
+            },
+            {
+              text:"Habilidades blandas",
+              href:"softSkills"
+            },
+            {
+              text:"Proyectos",
+              href:"projects"
+            },
+            {
+              text:"Experiencia",
+              href:"experience"
+            },
+            {
+              text:"Curricullum",
+              href:"cv"
+            }
+
+          ]}
+        ></NavBar>
+
         <img className={`animate__animated animate__backInLeft ${styles.profileImg}`} src={profileImg} alt="profile-picture" />
         <div className={`animate__animated animate__backInRight ${styles.nameContainer}`}>
           <p>Bienvenido a mi portfolio, soy</p><br />
@@ -113,7 +145,7 @@ function App() {
             data='(+54)2284-588151' />
         </div>
 
-        <div className='animate__animated animate__backInUp'>
+        <div id='about' className='animate__animated animate__backInUp'>
           <hr />
           <Section
 

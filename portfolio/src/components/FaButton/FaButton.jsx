@@ -20,8 +20,6 @@ export default function FaButton(props){
         props.onClick();
     }
 
-    console.log(props.isSelected, props.data, hidden)
-
     return  <>
         <div onClick={handleOnClick} className={`${styles.customButton} ${props.isSelected ? styles.selected : ''}`}>
             <FontAwesomeIcon icon={props.faIcon} />

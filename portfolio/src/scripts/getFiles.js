@@ -4,9 +4,9 @@ export async function importAllSvg(softSkills = false) {
   let svgFiles;
 
   if (softSkills){
-    svgFiles = import.meta.glob('../../../img/softSkillsIcons/*.svg');
+    svgFiles = import.meta.glob('../assets/img/softSkillsIcons/*.svg');
   } else{
-    svgFiles = import.meta.glob('../../../img/icons/*.svg');
+    svgFiles = import.meta.glob('../assets/img/icons/*.svg');
   }
   
 
