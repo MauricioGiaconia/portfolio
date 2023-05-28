@@ -11,6 +11,7 @@ import Section from './components/Section/Section.jsx';
 import FaButton from './components/FaButton/FaButton.jsx';
 import IconLink from './components/IconLink/IconLink.jsx';
 import NavBar from './components/NavBar/NavBar';
+import Exhibitor from './components/Exhibitor/Exhibitor';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import { importAllSvg } from './scripts/getFiles.js';
@@ -163,6 +164,24 @@ function App() {
           <Section title="Habilidades blandas"
             icons={softsIcons} />
         </div>
+
+        <div id='projects' className='animate__animated animate__backInUp'>
+          <hr />
+          <Exhibitor
+            title='H2H'
+            description='eCommerce para colombia'
+            source = {[
+              github,
+              downloadIcon,
+              linkedIn
+            ]}
+            tech = {[
+              downloadIcon
+            ]
+            }
+          />
+        </div>
+        
 
       </div>
     </BrowserRouter>
