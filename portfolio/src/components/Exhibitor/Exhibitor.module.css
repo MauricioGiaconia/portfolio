@@ -1,0 +1,28 @@
+.exhibitorContainer{
+    display: flex;
+    height: 300px;
+}
+
+.carouselContainer{
+    height: 100%;
+    width: 35%;
+}
+
+
+.customCarousel{
+    height:100%;
+}
+
+
+
+.carouselContent{
+    height: 200px;
+}
+
+.carouselContent img{
+    height: 100%;
+}
+
+
+
+
