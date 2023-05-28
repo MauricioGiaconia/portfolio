@@ -1,11 +1,12 @@
 .exhibitorContainer{
     display: flex;
     height: 300px;
+    flex-direction: column;
 }
 
 .carouselContainer{
     height: 100%;
-    width: 35%;
+    width: 100%;
 }
 
 
