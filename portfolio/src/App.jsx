@@ -61,38 +61,37 @@ function App() {
     <BrowserRouter>
 
       <header className={`${styles.titleContainer}`}>
+        <div className={`animate__animated animate__backInLeft ${styles.navContainer}`}>
+          <NavBar 
+              navigation={[
+                {
+                  text:"Sobre mi",
+                  href:"#about"
+                },
+                {
+                  text:"Habilidades técnicas",
+                  href:"#techSkills"
+                },
+                {
+                  text:"Habilidades blandas",
+                  href:"#softSkills"
+                },
+                {
+                  text:"Proyectos",
+                  href:"#projects"
+                },
+                {
+                  text:"Experiencia",
+                  href:"#experience"
+                },
+                {
+                  text:"Curricullum",
+                  href:"/cv/CV - Mauricio Giaconía 2023.pdf",
+                  download: true
+                }
 
-        <NavBar
-          navigation={[
-            {
-              text:"Sobre mi",
-              href:"#about"
-            },
-            {
-              text:"Habilidades técnicas",
-              href:"#techSkills"
-            },
-            {
-              text:"Habilidades blandas",
-              href:"#softSkills"
-            },
-            {
-              text:"Proyectos",
-              href:"#projects"
-            },
-            {
-              text:"Experiencia",
-              href:"#experience"
-            },
-            {
-              text:"Curricullum",
-              href:"/cv/CV - Mauricio Giaconía 2023.pdf",
-              download: true
-            }
-
-          ]}
-        ></NavBar>
-
+              ]}></NavBar>
+        </div>
         <img className={`animate__animated animate__backInLeft ${styles.profileImg}`} src={profileImg} alt="profile-picture" />
         <div className={`animate__animated animate__backInRight ${styles.nameContainer}`}>
           <p>Bienvenido a mi portfolio, soy</p><br />

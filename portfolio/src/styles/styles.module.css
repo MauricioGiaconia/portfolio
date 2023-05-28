@@ -15,6 +15,9 @@
     margin: 0 auto;
 }
 
+.navContainer{
+    z-index: 1;
+}
 
 .nameContainer{
     align-self: center;
