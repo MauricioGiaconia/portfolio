@@ -27,13 +27,6 @@ function App() {
 
   const contactIcons = [
     {
-      icon: downloadIcon,
-      name: 'Download',
-      text: 'cv',
-      download: true,
-      link: '/cv/CV - Mauricio Giaconía 2023.pdf'
-    },
-    {
       icon: linkedIn,
       name: 'LinkedIn',
       download: false,
@@ -77,23 +70,24 @@ function App() {
             },
             {
               text:"Habilidades técnicas",
-              href:"techSkills"
+              href:"#techSkills"
             },
             {
               text:"Habilidades blandas",
-              href:"softSkills"
+              href:"#softSkills"
             },
             {
               text:"Proyectos",
-              href:"projects"
+              href:"#projects"
             },
             {
               text:"Experiencia",
-              href:"experience"
+              href:"#experience"
             },
             {
               text:"Curricullum",
-              href:"cv"
+              href:"/cv/CV - Mauricio Giaconía 2023.pdf",
+              download: true
             }
 
           ]}
@@ -159,13 +153,13 @@ function App() {
 
 
 
-        <div className='animate__animated animate__backInUp'>
+        <div id='techSkills' className='animate__animated animate__backInUp'>
           <hr />
           <Section title="Habilidades técnicas"
             icons={skillsIcons}></Section>
         </div>
 
-        <div className='animate__animated animate__backInUp'>
+        <div id='softSkills' className='animate__animated animate__backInUp'>
           <hr />
           <Section title="Habilidades blandas"
             icons={softsIcons} />
