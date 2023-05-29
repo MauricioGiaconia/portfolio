@@ -21,7 +21,7 @@ export default function Exhibitor(props){
       };
    
     return <div className={`${styles.exhibitorContainer}`}>
-
+      
         <div className={`${styles.carouselContainer}`}> 
             <Carousel className={`${styles.customCarousel}`}>
 
@@ -41,14 +41,19 @@ export default function Exhibitor(props){
             </Carousel>
         </div>
 
-        <div>
+        <div className={`${styles.textContainer}`}>
             <h2>{props.title}</h2>
             <p>{props.description}</p>
 
-            <div>
-                {props.tech.map((item, index) => {
-                    return <img key={index} src={item.icon} alt={item.name} />
-                })}
+            <div className={`${styles.techList}`}>
+                
+                <div>
+                    <ul>
+                        {props.tech.map((item, index) => {
+                            return <li key={index} > {item} </li>
+                        })}
+                    </ul>
+                </div>
             </div> 
         </div>
     </div>

@@ -11,6 +11,12 @@ hr{
   border-radius: 10px;
 }
 
+h2{
+  color: var(--title-color);
+  margin-top: var(--spacing-top);
+  text-align: start;
+}
+
 .animate__backInUp{
   animation-delay: 1s;
 }

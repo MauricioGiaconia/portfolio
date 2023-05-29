@@ -167,16 +167,27 @@ function App() {
 
         <div id='projects' className='animate__animated animate__backInUp'>
           <hr />
+
+          <h2>Proyectos</h2>
           <Exhibitor
-            title='H2H'
-            description='eCommerce para colombia'
+            title='H2H (Hand to Hand)'
+            description='Participé en un equipo en el diseño y desarrollo de un ecommerce especializado en productos de
+            segunda mano. Colaboré activamente en la implementación de funciones clave como autenticación de
+            usuarios, búsqueda y filtrado combinado, paginación, ordenamiento, baneo lógico de usuarios y productos,
+            envío de correos electrónicos, pasarela de pago con MercadoPago, y sistemas de roles. Este proyecto
+            se diseñó para operar en Colombia, teniendo en cuenta las necesidades y regulaciones específicas del
+            mercado.'
             source = {[
               github,
               downloadIcon,
               linkedIn
             ]}
             tech = {[
-              downloadIcon
+              'NextJS',
+              'Express',
+              'NodeJS',
+              'MongoDB',
+              'Mongoose'
             ]
             }
           />

@@ -2,6 +2,7 @@
     display: flex;
     height: 300px;
     flex-direction: column;
+    margin-top: var(--spacing-top);
 }
 
 .carouselContainer{
@@ -26,6 +27,26 @@
 
 .carouselContent video{
     height: 100%;
+}
+
+.textContainer h2{
+    text-align: center;
+    margin-top: var(--spacing-top);
+}
+
+.techList{
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.techList ul{
+    list-style: none;
+    display: flex;
+    place-content: flex-end;
+}
+
+.techList ul li{
+    padding: 10px;
 }
 
 
