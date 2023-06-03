@@ -14,11 +14,11 @@ import NavBar from './components/NavBar/NavBar';
 import Exhibitor from './components/Exhibitor/Exhibitor';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-import { importAllSvg } from './scripts/getFiles.js';
+import { importAllSvg, searchIcon } from './scripts/getFiles.js';
 import downloadIcon from './assets/img/downloadIcon/download.svg';
 import linkedIn from './assets/img/contactIcons/linkedIn.svg';
 import github from './assets/img/contactIcons/github.svg';
-
+import h2hVideo from './assets/projects/h2h/h2h-video.mp4'
 
 function App() {
 
@@ -180,15 +180,29 @@ function App() {
             source = {[
               github,
               downloadIcon,
-              linkedIn
+              linkedIn,
+              h2hVideo
             ]}
-            tech = {[
-              'NextJS',
-              'Express',
-              'NodeJS',
-              'MongoDB',
-              'Mongoose'
-            ]
+            github = 'https://github.com/MauricioGiaconia/pacto'
+            tech = {
+              searchIcon(skillsIcons, ['express', 'nextjs', 'nodejs', 'react', 'mongodb', 'redux', 'git'])
+            }
+          />
+
+          <Exhibitor
+            title='Videogames SPA'
+            description='Este fue mi proyecto individual para el bootcamp SoyHenry. Consiste en una SPA en la cual apliqué todo lo aprendido en el curso. 
+            Del lado del frontend, utilicé tecnologías como ReactJS, Redux, CSS y librerías como FontAwesome. En el backend, utilicé Express como framework para la construcción del servidor, PostgreSQL como base de datos y Sequelize como ORM.
+            Esta página permite a un usuario ver un listado de varios videojuegos (traídos de una API externa, rawg.io, y de la base de datos propia), cargar un nuevo videojuego a través de un formulario validado, ordenar los videojuegos según guste, filtrarlos de manera combinada y ver el detalle de un ítem para poder visualizar su información completa. Cabe resaltar que el listado de juegos cuenta con un paginado.'
+            source = {[
+              github,
+              downloadIcon,
+              linkedIn,
+              h2hVideo
+            ]}
+            github = 'https://github.com/MauricioGiaconia/PI-Videogames'
+            tech = {
+              searchIcon(skillsIcons, ['express', 'nodejs', 'react', 'postgresql', 'redux', 'git', 'css3'])
             }
           />
         </div>
